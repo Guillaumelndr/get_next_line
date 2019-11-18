@@ -6,7 +6,7 @@
 /*   By: gulandre <gulandre@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/06 07:58:04 by gulandre     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/16 13:42:04 by gulandre    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 08:36:09 by gulandre    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -42,4 +42,16 @@ size_t	ft_strlen(const char *s1, int i)
 		j++;
 	}
 	return (j);
+}
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*ptr;
+
+	if (!(ptr = malloc(size * count)))
+		return (0);
+	if (size * count > 2147483648)
+		return (ptr);
+	ptr[0] = '\0';
+	return (ptr);
 }

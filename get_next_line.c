@@ -6,7 +6,7 @@
 /*   By: gulandre <gulandre@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/05 13:30:34 by gulandre     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/16 13:12:50 by gulandre    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 19:03:25 by gulandre    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -57,6 +57,8 @@ int		ft_realoc(t_gnl *nl, char *buff)
 
 	i = -1;
 	transfert(nl);
+	if (ft_strlen(buff, 0) == 0)
+		return (0);
 	while (buff[nl->index])
 	{
 		++i;
@@ -109,7 +111,7 @@ int		get_next_line(int fd, char **line)
 	*line = nl->c_line;
 	if (!nl->total_oct)
 	{
-		*line = calloc(1, 1); // attention calloc non ft_
+		*line = ft_calloc(1, 1);
 		return (free_all(nl, 0, buff));
 	}
 	return (free_all(nl, 1, buff));
