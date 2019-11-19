@@ -6,7 +6,7 @@
 /*   By: gulandre <gulandre@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/11/05 13:30:34 by gulandre     #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/18 19:03:25 by gulandre    ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/18 22:03:41 by gulandre    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -84,9 +84,7 @@ void	analized(t_gnl *nl, char *buff, int fd)
 		nl->index = 0;
 	}
 	else
-	{
 		nl->oct = ft_strlen(buff, ++nl->index);
-	}
 	nl->total_oct += nl->oct;
 }
 
